@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 //COMPONENTS
 import Home from './components/home';
@@ -12,7 +12,11 @@ const App = () => {
         <BrowserRouter>
             <div>
                 <header>
-                    Header
+                    <Link to="/">Home</Link><br/>
+                    <Link to="/posts">Posts</Link><br/>
+                    <Link to={{
+                        pathname:'/profile'
+                    }}>Profile</Link><br/>
                 </header>
                 <Route path="/" exact component={Home}/>
                 <Route path="/posts" component={Posts} />
