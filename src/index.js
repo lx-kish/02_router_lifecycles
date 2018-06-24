@@ -28,6 +28,7 @@ const App = () => {
                     <Route path="/posts" component={Posts} />
                     <Route path="/profile" component={Profile} />
                     <Route path="/" exact component={Home} />
+                    <Route render={()=> <h3>oop 404</h3>}/>
                 </Switch>
             </div>
         </BrowserRouter>
