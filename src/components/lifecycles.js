@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Life extends Component {
+class Life extends PureComponent {
     // 1 get default props
 
     // 2 set default state
@@ -8,40 +8,40 @@ class Life extends Component {
         title:'Life cycles'
     }
 
-    // 5 after render
-    componentDidMount(){
-        console.log('5 after render');
-        document.querySelector('h3').style.color = 'red'
-    }
+    // // 5 after render
+    // componentDidMount(){
+    //     console.log('5 after render');
+    //     document.querySelector('h3').style.color = 'red'
+    // }
     
-    // 3 before render
-    componentWillMount(){
-        console.log('3 before render')
-    }
+    // // 3 before render
+    // componentWillMount(){
+    //     console.log('3 before render')
+    // }
 
-    componentWillUpdate(){
-        console.log('BEFORE UPDATE')
-    }
+    // componentWillUpdate(){
+    //     console.log('BEFORE UPDATE')
+    // }
 
-    componentDidUpdate(){
-        console.log('AFTER UPDATE')
-    }
+    // componentDidUpdate(){
+    //     console.log('AFTER UPDATE')
+    // }
 
-    shouldComponentUpdate(nextProps, nextState){
-        if(nextState.title === 'something else'){
-            return false;
-        }
+    // shouldComponentUpdate(nextProps, nextState){
+    //     if(nextState.title === this.state.title){
+    //         return false;
+    //     }
 
-        return true;
-    }
+    //     return true;
+    // }
 
-    componentWillReceiveProps(){
-        console.log('BEFORE RECEIVE PROPS')
-    }
+    // componentWillReceiveProps(){
+    //     console.log('BEFORE RECEIVE PROPS')
+    // }
 
-    componentWillUnmount(){
-        console.log('UNMOUNT')
-    }
+    // componentWillUnmount(){
+    //     console.log('UNMOUNT')
+    // }
 
     // 4 render jsx
     render() {
